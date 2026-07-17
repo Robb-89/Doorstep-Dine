@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doorstep &amp; Dine ΓÇö Private Chef Experience</title>
+  <title>Doorstep &amp; Dine — Private Chef Experience</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg:       #0a0a0f;
       --card:     #12131a;
@@ -19,9 +18,7 @@
       --muted:    #9ca3af;
       --white:    #ffffff;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--white);
@@ -30,10 +27,7 @@
       line-height: 1.6;
       min-height: 100vh;
     }
-
     h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
-
-    /* ΓöÇΓöÇ NAV ΓöÇΓöÇ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       height: 68px;
@@ -62,12 +56,8 @@
       font-weight: 600; font-family: 'Inter', sans-serif;
     }
     .nav-book:hover { opacity: .9; }
-
-    /* ΓöÇΓöÇ PAGES ΓöÇΓöÇ */
     .page { display: none; }
     .page.active { display: block; }
-
-    /* ΓöÇΓöÇ UTILS ΓöÇΓöÇ */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
     .container-sm { max-width: 768px; margin: 0 auto; padding: 0 32px; }
     .primary { color: var(--primary); }
@@ -102,8 +92,6 @@
     }
     .btn-border:hover { background: var(--primary); color: var(--white); }
     .check { color: var(--primary); margin-top: 2px; }
-
-    /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ HOME ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
     .hero {
       position: relative; height: 100vh; overflow: hidden;
       display: flex; align-items: center;
@@ -151,7 +139,6 @@
     .hero h1 { font-size: clamp(3.5rem,6vw,5.5rem); line-height: 1; font-weight: 900; color: var(--white); margin-bottom: 24px; }
     .hero p { font-size: 1.125rem; color: rgba(255,255,255,.7); max-width: 480px; margin-bottom: 40px; line-height: 1.7; }
     .hero-btns { display: flex; flex-wrap: wrap; gap: 16px; }
-
     .philosophy {
       background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
       padding: 80px 0; text-align: center;
@@ -159,19 +146,14 @@
     .philosophy blockquote { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 400; color: rgba(255,255,255,.9); margin-bottom: 20px; }
     .philosophy p { color: var(--muted); font-size: .95rem; line-height: 1.8; }
     .philosophy .link { color: var(--primary); font-size: .875rem; font-weight: 600; cursor: pointer; margin-top: 16px; display: inline-block; }
-
     .services-grid-section { padding: 80px 0; }
     .section-label { font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--primary); margin-bottom: 4px; }
     .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
     .section-header h2 { font-size: 2.25rem; font-weight: 700; }
     .section-header .link { color: var(--primary); font-size: .875rem; font-weight: 600; cursor: pointer; }
     .cards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-    .service-card {
-      position: relative; aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; cursor: pointer;
-    }
-    .service-card-bg {
-      position: absolute; inset: 0; transition: transform .7s;
-    }
+    .service-card { position: relative; aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; cursor: pointer; }
+    .service-card-bg { position: absolute; inset: 0; transition: transform .7s; }
     .service-card:hover .service-card-bg { transform: scale(1.05); }
     .card-bg-1 { background: linear-gradient(135deg,#1a1a2e,#2d1b6e,#4a2c8a); }
     .card-bg-2 { background: linear-gradient(135deg,#0f1a0a,#1a3a1a,#2d5a2d); }
@@ -181,7 +163,6 @@
     .service-card-body h3 { font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 6px; transition: color .2s; }
     .service-card:hover .service-card-body h3 { color: var(--primary); }
     .service-card-body p { color: var(--muted); font-size: .875rem; line-height: 1.5; }
-
     .cta-banner { padding: 0 0 80px; }
     .cta-inner {
       background: linear-gradient(135deg, #1a2a6c, var(--primary), #1a3a8c);
@@ -198,23 +179,15 @@
       white-space: nowrap; transition: opacity .2s;
     }
     .btn-white:hover { opacity: .9; }
-
-    /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ SERVICES ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
-    .page-header {
-      padding: 80px 0; text-align: center;
-      background: var(--card); border-bottom: 1px solid var(--border);
-    }
+    .page-header { padding: 80px 0; text-align: center; background: var(--card); border-bottom: 1px solid var(--border); }
     .page-header h1 { font-size: clamp(2.5rem,5vw,3.5rem); margin-bottom: 20px; }
     .page-header p { color: var(--muted); font-size: 1.125rem; }
-
     .service-section { padding: 80px 0; }
     .service-section.alt { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
     .service-img-wrap { position: relative; }
     .service-img-wrap .frame { position: absolute; inset: 16px; border: 1px solid rgba(37,99,235,.2); pointer-events: none; z-index: 2; }
-    .service-img-box {
-      aspect-ratio: 1; overflow: hidden; border: 1px solid var(--border); position: relative;
-    }
+    .service-img-box { aspect-ratio: 1; overflow: hidden; border: 1px solid var(--border); position: relative; }
     .service-img-box.wide { aspect-ratio: 4/3; }
     .img-placeholder { width: 100%; height: 100%; }
     .img-1 { background: linear-gradient(135deg,#1a1520,#2d1b4e,#1a0a30,#3d2060); }
@@ -231,8 +204,6 @@
     .check-list { list-style: none; margin-bottom: 32px; }
     .check-list li { display: flex; gap: 12px; color: var(--muted); margin-bottom: 12px; }
     .order-first { order: -1; }
-
-    /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ MENU ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
     .menu-header {
       position: relative; padding: 96px 0; text-align: center;
       background: var(--card); border-bottom: 1px solid rgba(37,99,235,.2); overflow: hidden;
@@ -264,8 +235,6 @@
     .menu-card .items-label { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .2em; color: var(--primary); margin-bottom: 12px; }
     .menu-card ul { list-style: none; border-top: 1px solid var(--border); padding-top: 16px; margin-top: auto; }
     .menu-card ul li { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 8px; line-height: 1.3; }
-
-    /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ BOOK ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
     .book-header { padding: 80px 0; text-align: center; background: var(--card); border-bottom: 1px solid var(--border); }
     .book-header h1 { font-size: clamp(2.5rem,5vw,3.5rem); margin-bottom: 20px; }
     .book-header p { color: var(--muted); font-size: 1.125rem; }
@@ -312,14 +281,10 @@
     }
     .success-card h2 { font-size: 2rem; margin-bottom: 16px; }
     .success-card p { color: var(--muted); font-size: 1.05rem; margin-bottom: 32px; }
-
-    /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ ABOUT ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
     .about-section { padding: 80px 0; }
     .about-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: start; }
     .about-img-wrap { position: sticky; top: 100px; }
-    .about-img-box {
-      aspect-ratio: 3/4; border: 1px solid var(--border); overflow: hidden; position: relative;
-    }
+    .about-img-box { aspect-ratio: 3/4; border: 1px solid var(--border); overflow: hidden; position: relative; }
     .about-img-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg,#0d1117 0%,#1a2040 35%,#1a0d2e 70%,#0a0a15 100%); }
     .about-img-box .frame { position: absolute; inset: 16px; border: 1px solid rgba(37,99,235,.2); pointer-events: none; }
     .about-text h2 { font-size: 2.25rem; margin-bottom: 32px; }
@@ -335,20 +300,13 @@
     .phil-item p { color: var(--muted); font-size: .875rem; line-height: 1.6; }
     .menu-link { color: var(--primary); font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
     .menu-link:hover { color: rgba(37,99,235,.8); }
-
-    /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ FOOTER ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
-    footer {
-      background: var(--card); border-top: 1px solid var(--border);
-      padding: 48px 0 32px; text-align: center;
-    }
+    footer { background: var(--card); border-top: 1px solid var(--border); padding: 48px 0 32px; text-align: center; }
     footer .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
     footer .footer-brand span { color: var(--primary); font-style: italic; }
     footer p { color: var(--muted); font-size: .8rem; margin-top: 4px; }
     footer .footer-links { display: flex; justify-content: center; gap: 32px; margin: 16px 0; }
     footer .footer-links a { color: var(--muted); font-size: .8rem; cursor: pointer; transition: color .2s; }
     footer .footer-links a:hover { color: var(--white); }
-
-    /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ RESPONSIVE ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
     @media (max-width: 900px) {
       nav { padding: 0 20px; }
       .nav-links { gap: 20px; }
@@ -372,7 +330,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo" onclick="showPage('home')">Doorstep <span>&amp; Dine</span></div>
   <div class="nav-links">
@@ -380,40 +337,35 @@
     <a onclick="showPage('services')" id="nav-services">Services</a>
     <a onclick="showPage('menu')" id="nav-menu">Menu</a>
     <a onclick="showPage('about')" id="nav-about">About</a>
-    <a onclick="showPage('book')" id="nav-book" class="nav-book">Book a Date ΓåÆ</a>
+    <a onclick="showPage('book')" id="nav-book" class="nav-book">Book a Date →</a>
   </div>
 </nav>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ HOME ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
 <div id="page-home" class="page active">
-
-  <!-- Hero -->
   <section class="hero">
     <img src="images/photo-1.png" alt="Chef cooking" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;" />
     <div class="hero-flames"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <img src="images/photo-2.png" alt="Doorstep &amp; Dine" style="width:160px;margin-bottom:24px;mix-blend-mode:lighten;" />
-      <div class="pill"><span class="pill-dot"></span><span>Now Booking ┬╖ Housecall Chef Experience</span></div>
+      <div class="pill"><span class="pill-dot"></span><span>Now Booking · Housecall Chef Experience</span></div>
       <h1>Fine Dining,<br><span class="primary italic">At Your Door.</span></h1>
-      <p>A personally trained chef arrives at your home and prepares a restaurant-quality multi-course meal in your kitchen ΓÇö live, aromatic, and unforgettable.</p>
+      <p>A personally trained chef arrives at your home and prepares a restaurant-quality multi-course meal in your kitchen — live, aromatic, and unforgettable.</p>
       <div class="hero-btns">
-        <button class="btn-primary" onclick="showPage('book')">Book Your Experience ΓåÆ</button>
+        <button class="btn-primary" onclick="showPage('book')">Book Your Experience →</button>
         <button class="btn-outline" onclick="showPage('services')">Explore Services</button>
       </div>
     </div>
   </section>
 
-  <!-- Philosophy -->
   <section class="philosophy">
     <div class="container-sm">
       <blockquote>"Not just catering. <em class="primary">A connection.</em>"</blockquote>
-      <p>We cook live in your home, filling it with aromas and warmth. Like having your best friend cook for you ΓÇö if your best friend happened to be a trained chef.</p>
-      <a class="link" onclick="showPage('about')">Meet the Chef ΓåÆ</a>
+      <p>We cook live in your home, filling it with aromas and warmth. Like having your best friend cook for you — if your best friend happened to be a trained chef.</p>
+      <a class="link" onclick="showPage('about')">Meet the Chef →</a>
     </div>
   </section>
 
-  <!-- Services Grid -->
   <section class="services-grid-section">
     <div class="container">
       <div class="section-header">
@@ -421,7 +373,7 @@
           <div class="section-label">What We Offer</div>
           <h2>Our Services</h2>
         </div>
-        <a class="link" onclick="showPage('services')">View all details ΓåÆ</a>
+        <a class="link" onclick="showPage('services')">View all details →</a>
       </div>
       <div class="cards-grid">
         <div class="service-card" onclick="showPage('services')">
@@ -452,7 +404,6 @@
     </div>
   </section>
 
-  <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="container">
       <div class="cta-inner">
@@ -460,16 +411,13 @@
           <h2>Ready for your experience?</h2>
           <p>Check availability and reserve your date in minutes.</p>
         </div>
-        <button class="btn-white" onclick="showPage('book')">Book Your Date ΓåÆ</button>
+        <button class="btn-white" onclick="showPage('book')">Book Your Date →</button>
       </div>
     </div>
   </section>
-
 </div>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ SERVICES ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
 <div id="page-services" class="page" style="padding-top:68px;">
-
   <section class="page-header">
     <div class="container-sm">
       <h1>Culinary <span class="primary italic">Experiences</span></h1>
@@ -477,18 +425,17 @@
     </div>
   </section>
 
-  <!-- Dinner -->
   <section class="service-section">
     <div class="container">
       <div class="service-grid">
         <div class="service-text" style="order:1">
-          <div class="badge">2ΓÇô4 Guests</div>
+          <div class="badge">2–4 Guests</div>
           <h2>Private Dinners</h2>
           <p>Transform your dining room into the most exclusive restaurant in the city. We arrive with fresh ingredients, prepare a multi-course tasting menu right before your eyes, serve each course with detailed explanations, and leave your kitchen spotless.</p>
           <ul class="check-list">
-            <li><span class="check">Γ£ô</span> Custom multi-course tasting menu</li>
-            <li><span class="check">Γ£ô</span> Wine pairing recommendations</li>
-            <li><span class="check">Γ£ô</span> Complete clean-up</li>
+            <li><span class="check">✓</span> Custom multi-course tasting menu</li>
+            <li><span class="check">✓</span> Wine pairing recommendations</li>
+            <li><span class="check">✓</span> Complete clean-up</li>
           </ul>
           <button class="btn-border" onclick="showPage('book')">Inquire for Dinner</button>
         </div>
@@ -500,7 +447,6 @@
     </div>
   </section>
 
-  <!-- Small Gatherings -->
   <section class="service-section alt">
     <div class="container">
       <div class="service-grid">
@@ -509,13 +455,13 @@
           <div class="frame"></div>
         </div>
         <div class="service-text" style="padding-left:32px">
-          <div class="badge">5ΓÇô15 Guests</div>
+          <div class="badge">5–15 Guests</div>
           <h2>Small Gatherings</h2>
           <p>Host the perfect dinner party without the stress. We handle the shopping, prepping, cooking, and serving so you can actually spend time with your guests. From beautiful passed appetizers to family-style feasts.</p>
           <ul class="check-list">
-            <li><span class="check">Γ£ô</span> Passed hors d'oeuvres or seated meals</li>
-            <li><span class="check">Γ£ô</span> Interactive kitchen experience</li>
-            <li><span class="check">Γ£ô</span> Table setting assistance</li>
+            <li><span class="check">✓</span> Passed hors d'oeuvres or seated meals</li>
+            <li><span class="check">✓</span> Interactive kitchen experience</li>
+            <li><span class="check">✓</span> Table setting assistance</li>
           </ul>
           <button class="btn-border" onclick="showPage('book')">Inquire for Gathering</button>
         </div>
@@ -523,7 +469,6 @@
     </div>
   </section>
 
-  <!-- Grand Events -->
   <section class="service-section" style="padding-bottom:96px">
     <div class="container">
       <div class="service-grid">
@@ -532,9 +477,9 @@
           <h2>Grand Events</h2>
           <p>For life's biggest celebrations, we scale up our personal approach. We bring an expanded team to execute flawless catering with the same dedication to quality, warmth, and aesthetic perfection as our intimate dinners.</p>
           <ul class="check-list">
-            <li><span class="check">Γ£ô</span> Customized event menus</li>
-            <li><span class="check">Γ£ô</span> Professional serving staff</li>
-            <li><span class="check">Γ£ô</span> Buffet or plated options</li>
+            <li><span class="check">✓</span> Customized event menus</li>
+            <li><span class="check">✓</span> Professional serving staff</li>
+            <li><span class="check">✓</span> Buffet or plated options</li>
           </ul>
           <button class="btn-border" onclick="showPage('book')">Inquire for Event</button>
         </div>
@@ -545,17 +490,14 @@
       </div>
     </div>
   </section>
-
 </div>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ MENU ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
 <div id="page-menu" class="page" style="padding-top:68px;">
-
   <section class="menu-header">
     <div class="container" style="position:relative">
       <div class="eyebrow">Doorstep &amp; Dine</div>
       <h1>The <span class="primary italic">Menu</span></h1>
-      <div class="ornament"><div class="ornament-line"></div><span class="ornament-star">Γ£ª</span><div class="ornament-line"></div></div>
+      <div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦</span><div class="ornament-line"></div></div>
       <p class="sub">A taste of what we bring to your table. Every dish can be tailored to you.</p>
     </div>
   </section>
@@ -563,25 +505,21 @@
   <section class="menu-cards">
     <div class="container">
       <div class="menu-grid">
-
         <div class="menu-card">
           <div class="num">I</div>
           <h3>Proteins</h3>
           <ul><li>Steak</li><li>Chicken</li><li>Shrimp</li><li>Lobster</li></ul>
         </div>
-
         <div class="menu-card">
           <div class="num">II</div>
           <h3>Vegetables</h3>
           <ul><li>Onions</li><li>Zucchini</li><li>Mushrooms</li><li>Napa Cabbage</li><li>Carrots</li></ul>
         </div>
-
         <div class="menu-card">
           <div class="num">III</div>
           <h3>Egg Noodles</h3>
           <ul><li>Udon</li></ul>
         </div>
-
         <div class="menu-card">
           <div class="num">IV</div>
           <h3>Fried Rice</h3>
@@ -589,38 +527,31 @@
           <div class="items-label">Your choice of</div>
           <ul><li>Chinese Sausage</li><li>Pork</li><li>Lobster</li></ul>
         </div>
-
         <div class="menu-card">
           <div class="num">V</div>
           <h3>Non-Traditional</h3>
           <ul><li>Chinese Sausage</li><li>Pork</li><li>Lobster, with fish oil chili peppers</li></ul>
         </div>
-
         <div class="menu-card highlight">
           <div class="num">VI</div>
           <h3>Signature House Sauce</h3>
           <p class="tag">Blue Garlic Butter</p>
-          <p class="desc">Garlic, butter, and soy sauce, finished with our house blue hue ΓÇö a one-of-a-kind touch you won't find anywhere else.</p>
+          <p class="desc">Garlic, butter, and soy sauce, finished with our house blue hue — a one-of-a-kind touch you won't find anywhere else.</p>
         </div>
-
         <div class="menu-card highlight" style="grid-column: span 1;">
           <div class="num">VII</div>
           <h3>Bespoke Requests</h3>
-          <p class="desc">Want something that's not here? Let's talk about it ΓÇö every menu can be built around you.</p>
+          <p class="desc">Want something that's not here? Let's talk about it — every menu can be built around you.</p>
           <div style="margin-top:auto; padding-top:8px;">
             <button class="btn-primary" style="border-radius:4px; padding:12px 24px;" onclick="showPage('book')">Book Your Experience</button>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
 </div>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ BOOK ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
 <div id="page-book" class="page" style="padding-top:68px; padding-bottom:96px;">
-
   <section class="book-header">
     <div class="container-sm">
       <h1>Reserve your <span class="primary italic">Table</span></h1>
@@ -630,9 +561,8 @@
 
   <section class="book-section">
     <div class="container">
-
       <div class="success-card" id="success-card">
-        <div class="success-icon">Γ£ô</div>
+        <div class="success-icon">✓</div>
         <h2>Request Received</h2>
         <p>Thank you for your interest. We'll be in touch within 24 hours to discuss your event details and menu preferences.</p>
         <button class="btn-outline" onclick="resetForm()" style="border-radius:4px;">Submit Another Request</button>
@@ -640,7 +570,6 @@
 
       <div class="book-form-wrap" id="book-form-wrap">
         <div class="form-top-bar"></div>
-
         <form onsubmit="handleSubmit(event)" novalidate>
           <div class="form-grid">
             <div class="form-group">
@@ -660,8 +589,8 @@
             <div class="form-group">
               <label>Service Type</label>
               <select id="f-service" required>
-                <option value="dinner">Private Dinner (2ΓÇô4 guests)</option>
-                <option value="small-event">Small Gathering (5ΓÇô15 guests)</option>
+                <option value="dinner">Private Dinner (2–4 guests)</option>
+                <option value="small-event">Small Gathering (5–15 guests)</option>
                 <option value="big-event">Grand Event (15+ guests)</option>
               </select>
             </div>
@@ -681,20 +610,16 @@
             <textarea id="f-message" placeholder="Tell us about the occasion, any dietary restrictions, or cuisine preferences..." required></textarea>
           </div>
           <div class="pricing-note" id="pricing-note">
-            ΓÅ│ <strong>Estimated Total: $120</strong> ΓÇö $60/person ┬╖ $550 minimum ┬╖ Final pricing confirmed after review.
+            ⏳ <strong>Estimated Total: $120</strong> — $60/person · $550 minimum · Final pricing confirmed after review.
           </div>
           <button type="submit" class="submit-btn">Submit Inquiry</button>
         </form>
       </div>
-
     </div>
   </section>
-
 </div>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ ABOUT ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
 <div id="page-about" class="page" style="padding-top:68px;">
-
   <section class="page-header">
     <div class="container-sm">
       <h1>The <span class="primary italic">Chef</span></h1>
@@ -705,14 +630,12 @@
   <section class="about-section">
     <div class="container">
       <div class="about-grid">
-
         <div class="about-img-wrap">
           <div class="about-img-box">
             <img src="images/photo-6.png" alt="Portrait of the Chef" style="width:100%;height:100%;object-fit:cover;" />
             <div class="frame"></div>
           </div>
         </div>
-
         <div class="about-text">
           <h2>Food tastes better when it's personal.</h2>
           <p>After years of working in high-end restaurant kitchens, I realized something was missing. The food was beautiful, the technique was flawless, but the connection with the people eating the food was completely lost behind swinging kitchen doors.</p>
@@ -720,7 +643,6 @@
           <blockquote class="about-quote">"I don't just want to be your caterer. I want to be your private chef, your culinary guide, and your friend in the kitchen."</blockquote>
           <p>When you book an experience with me, you're getting more than just a meal. You're getting an evening of storytelling, culinary education, and a completely stress-free dining experience in the comfort of your own home.</p>
           <p>From sourcing the best local ingredients to leaving your kitchen cleaner than I found it, every detail is considered. Let's create something beautiful together.</p>
-
           <hr class="divider" />
           <h3 class="serif" style="font-size:1.5rem;margin-bottom:24px;">Culinary Philosophy</h3>
           <div class="philosophy-grid">
@@ -741,20 +663,16 @@
               <p>Fine dining should feel welcoming and warm, never stiff or intimidating.</p>
             </div>
           </div>
-
           <hr class="divider" />
           <h3 class="serif" style="font-size:1.5rem;margin-bottom:16px;">What I'm Known For</h3>
           <p style="color:var(--muted);margin-bottom:20px;">From surf-and-turf classics to our signature blue garlic butter sauce, take a look at the full menu of dishes guests keep requesting.</p>
-          <a class="menu-link" onclick="showPage('menu')">View the Menu <span>ΓåÆ</span></a>
+          <a class="menu-link" onclick="showPage('menu')">View the Menu <span>→</span></a>
         </div>
-
       </div>
     </div>
   </section>
-
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">Doorstep <span>&amp; Dine</span></div>
   <div class="footer-links">
@@ -764,7 +682,7 @@
     <a onclick="showPage('about')">About</a>
     <a onclick="showPage('book')">Book</a>
   </div>
-  <p>Private Chef Experience ┬╖ Doorstep &amp; Dine</p>
+  <p>Private Chef Experience · Doorstep &amp; Dine</p>
 </footer>
 
 <script>
@@ -779,18 +697,16 @@
     window.scrollTo({top:0,behavior:'instant'});
   }
 
-  // Pricing calculator
   const ADULT = 60, MIN = 550;
   function updatePricing() {
     const guests = parseInt(document.getElementById('f-guests').value) || 2;
     const total = Math.max(guests * ADULT, MIN);
     const note = total === MIN && guests * ADULT < MIN ? ' (minimum charge applied)' : '';
     document.getElementById('pricing-note').innerHTML =
-      `ΓÅ│ <strong>Estimated Total: $${total.toLocaleString()}</strong> ΓÇö $${ADULT}/person ┬╖ $${MIN} minimum${note} ┬╖ Final pricing confirmed after review.`;
+      `⏳ <strong>Estimated Total: $${total.toLocaleString()}</strong> — $${ADULT}/person · $${MIN} minimum${note} · Final pricing confirmed after review.`;
   }
   document.getElementById('f-guests').addEventListener('input', updatePricing);
 
-  // Form submission
   function handleSubmit(e) {
     e.preventDefault();
     const name = document.getElementById('f-name').value.trim();
